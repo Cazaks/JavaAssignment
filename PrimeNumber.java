@@ -14,8 +14,8 @@ import java.util.Scanner;
 
 		while(prime < number){
 		if(number % prime == 0){
-		counter++;
-		prime++;
+		counter--;
+		prime--;
 		}
 		
 
