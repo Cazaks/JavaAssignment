@@ -10,7 +10,7 @@ import java.util.Scanner;
 		int number = input.nextInt();
 
 		int counter = 0;
-		int factoria = 1;
+		long factoria = 1;
 		counter = number;
 
 		while(counter != 0){
