@@ -7,17 +7,18 @@ import java.util.Scanner;
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Enter a number");
-		int number = input.nextInt();
 
 		int prime = 2;
 		int counter = 1;
 
 		while(prime < number){
+
+		int number = input.nextInt();
+
 		if(number % prime == 0){
 		counter--;
 		prime--;
 		}
-		
 
 		if(counter > 0){
 		System.out.print(number + " is not prime");
