@@ -305,34 +305,34 @@ import java.util.Scanner;
 			switch(selectMenu){
 		case 0: nokia = false; System.out.println("Exiting phone main menu"); break;
 		
-		case 1: boolean phoneBookSelection = true;
-			while(phoneBookSelection){
-			System.out.println(phoneBook);
-			System.out.println("Select Menu: ");
-			int phoneBookSelect = input.nextInt();
+	case 1: boolean phoneBookSelection = true;
+		while(phoneBookSelection){
+		System.out.println(phoneBook);
+		System.out.println("Select Menu: ");
+		int phoneBookSelect = input.nextInt();
 			
-			switch(phoneBookSelect){
-		case 0: phoneBookSelection = false;
+		switch(phoneBookSelect){
+	case 0: phoneBookSelection = false;
 				break;
  	
-			case 1: boolean searchMenu = true;
-				while(searchMenu){
-				System.out.println("Search");
-				System.out.println(searchSelect);
-				int searchOption = input.nextInt();
+		case 1: boolean searchMenu = true;
+			while(searchMenu){
+			System.out.println("Search");
+			System.out.println(searchSelect);
+			int searchOption = input.nextInt();
 
-				switch(searchOption){
-			case 0: searchMenu = false;
-				break;
-				default: System.out.println("Invalid selection, senter a valid number");	
-				if(searchOption <= 0 && searchOption > 1) {
-				System.out.println("Invalid selection. Eenter a valid number");
-				return;
-					}
-				}		
-				}break;
+			switch(searchOption){
+		case 0: searchMenu = false;
+			break;
+			default: System.out.println("Invalid selection, senter a valid number");	
+			if(searchOption <= 0 && searchOption > 1) {
+			System.out.println("Invalid selection. Eenter a valid number");
+			return;
+			}
+			}		
+			}break;
 
-			case 2: boolean serviceNos = true;
+		case 2: boolean serviceNos = true;
 				while(serviceNos){
 				System.out.println("Service nos."); 
 				System.out.println(serviceNosSelect);
@@ -533,14 +533,14 @@ import java.util.Scanner;
 			}break;
 	
 				
-		case 2: boolean messageSelection = true;
-			while(messageSelection){
-			System.out.println(messageBox);
-			System.out.println("Make selection: ");
-			int selectMessage = input.nextInt();
+	case 2: boolean messageSelection = true;
+		while(messageSelection){
+		System.out.println(messageBox);
+		System.out.println("Make selection: ");
+		int selectMessage = input.nextInt();
 
-			switch(selectMessage){
-		case 0: messageSelection = false;
+		switch(selectMessage){
+	case 0: messageSelection = false;
 				break;
 
 			case 1: boolean messageMenu = true;
@@ -578,7 +578,8 @@ import java.util.Scanner;
 				}		
 				}break; 
 				
-			case 3: System.out.println("Outbox"); break;
+			case 3: 
+				System.out.println("Outbox"); break;
 			case 4: System.out.println("Picture messages"); break;
 			case 5: System.out.println("Templates"); break;
 			case 6: System.out.println("Smileys"); break;
