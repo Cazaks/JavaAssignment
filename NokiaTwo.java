@@ -28,22 +28,6 @@ import java.util.Scanner;
 		0. Exit
 		""";
 
-		String messageBox ="""
-			Select mesaage menu
-			Press:
-			1 -  Write messages
-			2 - Inbox
-			3 - Outbox
-			4 - Picture nessages
-			5 - Templates
-			6 - Smileys
-			7 - Message settings
-			8 - Info service
-			9 - Voice mailbox number
-			10 - Service command editor
-			0 - Back to main menu
-			""";
-
 	String clockMenuOption = """
 		Select clock display
 		Press:
@@ -56,9 +40,47 @@ import java.util.Scanner;
 		0 - Back to main menu
 		""";
 
-	System.out.println(mainMenu);
-	System.out.println("Seelct Menu: ");
-	int selectMenu = input.nextInt();
+	String messageBox ="""
+		Select mesaage menu
+		Press:
+		1 -  Write messages
+		2 - Inbox
+		3 - Outbox
+		4 - Picture nessages
+		5 - Templates
+		6 - Smileys
+		7 - Message settings
+		8 - Info service
+		9 - Voice mailbox number
+		10 - Service command editor
+		0 - Back to main menu
+		""";
+
+		String writeMessageMenu = """
+				press:
+				0: Back to message menu
+				""";
+
+			String inboxMenu = """
+				press:
+				0. Back to message menu
+				""";
+
+
+				String messageSettings = """
+					Message settings
+					Press:
+					1 - Set 1
+					2 - Common
+					""";
+
+					String set1 = """
+					Select set
+					Press:
+					1 - Message center number
+					2 - Messages sent as
+					3 - Message validity
+					""";
 
 		String phoneBook = """
 			PhoneBook
@@ -103,19 +125,55 @@ import java.util.Scanner;
 						0. Return to Phonebook menu
 						""";
 
+					String assignToneSelect = """
+						press:
+						0. Return to Phonebook menu
+						""";
 
+					String sendbCardSelection = """
+						press:
+						0. Return to Phonebook menu
+						""";
 
-		String options = """
-			Options
-			press;
-			1 - Type of view
-			2 - Memory status
-			0 - Back to main menu
+					String optionMenuSelection = """
+						press:
+						0. Return to Phonebook menu
+						""";
 
-			""";
+							String options = """
+								Options
+								press;
+								1 - Type of view
+								2 - Memory status
+								0 - Back to main menu
+
+								""";
+
+									String typeOfViewSelection = """
+										press:
+										0. Return to option menu selection
+										""";
+
+									String MemorystatusSelect = """
+										press:
+										0. Return to option menu selection
+										""";
+
+					String speedDailSelect = """
+						press:
+						0. Return to Phonebook menu
+						""";
+
+					String voictagsMenu = """
+						press:
+						0. Return to Phonebook menu
+						""";
+
+		
+										
 
 		String chatOptionSelect = """
-				
+			press:
 			0. Exist to main menu
 				""";
 
@@ -239,19 +297,23 @@ import java.util.Scanner;
 				0. Exit to main menu
 				""";
 
-		
-		switch(selectMenu){
+
+		System.out.println(mainMenu);
+		System.out.println("Seelct Menu: ");
+		int selectMenu = input.nextInt();
+
+			switch(selectMenu){
 		case 0: nokia = false; System.out.println("Exiting phone main menu"); break;
 		
 		case 1: boolean phoneBookSelection = true;
 			while(phoneBookSelection){
-
 			System.out.println(phoneBook);
 			System.out.println("Select Menu: ");
 			int phoneBookSelect = input.nextInt();
 			
-		switch(phoneBookSelect){
-			case 0: phoneBookSelection = false;
+			switch(phoneBookSelect){
+		case 0: phoneBookSelection = false;
+				break;
  	
 			case 1: boolean searchMenu = true;
 				while(searchMenu){
@@ -260,12 +322,12 @@ import java.util.Scanner;
 				int searchOption = input.nextInt();
 
 				switch(searchOption){
-				case 0: searchMenu = false;
+			case 0: searchMenu = false;
 				break;
 				default: System.out.println("Invalid selection, senter a valid number");	
-					if(searchOption <= 0 && searchOption > 1) {
-					System.out.println("Invalid selection. Eenter a valid number");
-					return;
+				if(searchOption <= 0 && searchOption > 1) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
 					}
 				}		
 				}break;
@@ -277,12 +339,12 @@ import java.util.Scanner;
 				int serviceNosOption = input.nextInt();
 
 				switch(serviceNosOption){
-				case 0: serviceNos = false;
+			case 0: serviceNos = false;
 				break;
 				default: System.out.println("Invalid selection, senter a valid number");	
-					if(serviceNosOption <= 1 && serviceNosOption > 2) {
-					System.out.println("Invalid selection. Eenter a valid number");
-					return;
+				if(serviceNosOption <= 1 && serviceNosOption > 2) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
 					}
 				}		
 				}break; 
@@ -294,12 +356,12 @@ import java.util.Scanner;
 				int addNameOption = input.nextInt();
 
 				switch(addNameOption){
-				case 0: addName  = false;
+			case 0: addName  = false;
 				break;
 				default: System.out.println("Invalid selection, senter a valid number");	
-					if(addNameOption <= 2 && addNameOption > 3) {
-					System.out.println("Invalid selection. Eenter a valid number");
-					return;
+				if(addNameOption <= 2 && addNameOption > 3) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
 					}
 				}		
 				}break; 
@@ -311,12 +373,12 @@ import java.util.Scanner;
 				int eraseOption = input.nextInt();
 
 				switch(eraseOption){
-				case 0: eraseMenu  = false;
+			case 0: eraseMenu  = false;
 				break;
 				default: System.out.println("Invalid selection, senter a valid number");	
-					if(eraseOption <= 3 && eraseOption > 4) {
-					System.out.println("Invalid selection. Eenter a valid number");
-					return;
+				if(eraseOption <= 3 && eraseOption > 4) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
 					}
 				}		
 				} break;
@@ -328,68 +390,194 @@ import java.util.Scanner;
 				int selectEditOption = input.nextInt();
 
 				switch(selectEditOption){
-				case 0: editMenu  = false;
+			case 0: editMenu  = false;
 				break;
 				default: System.out.println("Invalid selection, senter a valid number");	
-					if(selectEditOption <= 4 && selectEditOption > 5) {
-					System.out.println("Invalid selection. Eenter a valid number");
-					return;
+				if(selectEditOption <= 4 && selectEditOption > 5) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
 					}
 				}		
 				} break;
 
-				case 6: System.out.println("Assign tone"); break;
-				case 7: System.out.println("Send b'card"); break;
-			
-			case 8: System.out.println(options);
-				System.out.println("Seelct Menu: ");
-				int optionSelect = input.nextInt();
+			case 6: boolean assignTone = true;
+				while(assignTone){
+				System.out.println("Assign tone"); 
+				System.out.println(assignToneSelect);
+				int selectToneOption = input.nextInt();
 
-				switch(optionSelect){
-					case 1: System.out.println("Type of view"); break;
-					case 2: System.out.println("Memory status"); break;
+				switch(selectToneOption){
+			case 0: assignTone = false;
+				break;
+				default: System.out.println("Invalid selection, senter a valid number");	
+				if(selectToneOption  <= 5 && selectToneOption > 6) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
 					}
-					break;
+				}		
+				} break;
+				
+			case 7: boolean sendbCard = true;
+				while(sendbCard){ 
+				System.out.println("Send b'card"); 
+				System.out.println(sendbCardSelection);
+				int sendbCardOption = input.nextInt();
 
-			case 9: System.out.println("Speed dail"); break; 
-			case 10: System.out.println("Voice tags"); break;
-			default: System.out.println("Invalid number");	
-			  if(phoneBookSelect < 0 && phoneBookSelect > 10) {
-				System.out.println("Invalid number");
-				 return;
-			}		
+				switch(sendbCardOption){
+			case 0: sendbCard = false;
+				break;
+				default: System.out.println("Invalid selection, senter a valid number");	
+				if(sendbCardOption <= 6 && sendbCardOption > 7) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
+					}
+				}		
+				} break;
+			
+			case 8: boolean optionSelection = true;
+				while(optionSelection){
+				System.out.println(options);
+				System.out.println(optionMenuSelection);
+				int optionMenu = input.nextInt();
+
+				switch(optionMenu){
+			case 0: optionSelection = false;
+				break;
+				
+				
+					case 1:	boolean typeOfView = true;
+						while(typeOfView){ 
+						System.out.println("Type of view"); 
+						System.out.println(typeOfViewSelection);
+						int typeOfViewSelect = input.nextInt();
+						switch(typeOfViewSelect){
+
+					case 0: typeOfView = false;
+						break;
+						default: System.out.println("Invalid selection, senter a valid number");	
+						if(typeOfViewSelect <= 0 && typeOfViewSelect > 1) {
+						System.out.println("Invalid selection. Eenter a valid number");
+						return;
+							}
+						}		
+						} break;
+
+					case 2: boolean memoryStatus = true;
+						while(memoryStatus){
+						System.out.println("Memory status");
+						System.out.println(MemorystatusSelect);
+						int memoryStatusOption = input.nextInt();
+						switch(memoryStatusOption){
+
+					case 0: memoryStatus = false;
+						break;
+						default: System.out.println("Invalid selection, senter a valid number");	
+						if(memoryStatusOption <= 1 && memoryStatusOption > 2) {
+						System.out.println("Invalid selection. Eenter a valid number");
+						return;
+							}
+						}		
+						} 
+						break;
+				default: System.out.println("Invalid selection, senter a valid number");	
+				if(optionMenu <= 7 && optionMenu > 8) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
+					}
+				}		
+				} break;
+
+
+				
+			case 9: boolean speedDail = true;
+				while(speedDail){
+				System.out.println("Speed dail");
+				System.out.println(speedDailSelect);
+				int speedDailOption = input.nextInt();
+				switch(speedDailOption){
+
+			case 0: speedDail = false;
+				break;
+				default: System.out.println("Invalid selection, senter a valid number");	
+				if(speedDailOption <= 8 && speedDailOption > 9) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
+					}
+				}		
+				} break;
+ 
+			case 10: boolean voiceTag = true;
+				while(voiceTag){ 
+				System.out.println("Voice tags"); 
+				System.out.println(voictagsMenu);
+				int voiceTagOption = input.nextInt();
+				switch(voiceTagOption){
+			
+			case 0: voiceTag = false;
+				break;
+				default: System.out.println("Invalid selection, senter a valid number");	
+				if(voiceTagOption <= 9 && voiceTagOption > 10) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
+					}
+				}		
+				} break;
+
+			default: System.out.println("Invalid number, please enter a valid number");	
+			if(phoneBookSelect <= 0 && phoneBookSelect > 10) {
+			System.out.println("Invalid number");
+			return;
+				}		
 			}
 		
-		}break;
+			}break;
 	
-
+				
 		case 2: boolean messageSelection = true;
 			while(messageSelection){
+			System.out.println(messageBox);
+			System.out.println("Make selection: ");
+			int selectMessage = input.nextInt();
 
-		System.out.println(messageBox);
-		System.out.println("Make selection: ");
-		int selectMessage = input.nextInt();
-
-		String messageSettings = """
-			Message settings
-			Press:
-			1 - Set 1
-			2 - Common
-			""";
-
-			String set1 = """
-				Select set
-				Press:
-				1 - Message center number
-				2 - Messages sent as
-				3 - Message validity
-				""";
-
-		switch(selectMessage){
-			case 0: messageSelection = false;
+			switch(selectMessage){
+		case 0: messageSelection = false;
 				break;
-			case 1: System.out.println("Write message"); break;
-			case 2: System.out.println("Inbox"); break;
+
+			case 1: boolean messageMenu = true;
+				while(messageMenu){ 
+				System.out.println("Write message");
+				System.out.println(writeMessageMenu);
+				int writeMessageSelection = input.nextInt();
+				switch(writeMessageSelection){
+			
+			case 0: messageMenu = false;
+				break;
+				default: System.out.println("Invalid selection, senter a valid number");	
+				if(writeMessageSelection <= 0 && writeMessageSelection > 1) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
+					}
+				}		
+				}break; 
+				
+
+			case 2: boolean inboxOption = true;
+				while(inboxOption){ 
+				System.out.println("Inbox"); 
+				System.out.println(inboxMenu);
+				int inboxSelection = input.nextInt();
+				switch(inboxSelection){
+			
+			case 0: inboxOption = false;
+				break;
+				default: System.out.println("Invalid selection, senter a valid number");	
+				if(inboxSelection <= 1 && inboxSelection > 2) {
+				System.out.println("Invalid selection. Eenter a valid number");
+				return;
+					}
+				}		
+				}break; 
+				
 			case 3: System.out.println("Outbox"); break;
 			case 4: System.out.println("Picture messages"); break;
 			case 5: System.out.println("Templates"); break;
@@ -429,14 +617,16 @@ import java.util.Scanner;
 							case 2: System.out.println("Reply via same centre number"); break;
 							case 3: System.out.println("Character support"); break;	
 							}
+					
 					}break;
  
 			case 8: System.out.println("Info service"); break;
 			case 9: System.out.println("Voice mail number"); break;
 			case 10: System.out.println("Service command editor"); break;
-			default: System.out.println("Invalid number");	
+			
+			default: System.out.println("Invalid selection, please enter a valid number");	
 			  if(selectMessage < 0 && selectMessage > 10) {
-				System.out.println("Invalid number");
+				System.out.println("Invalid number, enter a valid option");
 				 return;
 	}
 	}
@@ -453,7 +643,7 @@ import java.util.Scanner;
 		case 0: chatSelect = false;
 		break;
 		default: System.out.println("Invalid selection, senter a valid number");	
-			  if(chatOption <= 2 && chatOption > 3) {
+			 if(chatOption <= 2 && chatOption > 3) {
 				System.out.println("Invalid selection. Eenter a valid number");
 				 return;
 			}
@@ -754,8 +944,6 @@ import java.util.Scanner;
 			}
 	}		
 	}break;	 
-
-
 
 	default: {System.out.println("Invalid input. Enter a valid number"); 
 			
