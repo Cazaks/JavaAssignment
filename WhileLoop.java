@@ -28,7 +28,8 @@ import java.util.Scanner;
 	sumation = sumation + add;
 	}
 	System.out.println("The sum is " + sumation);
-
+	
+		//while loop on random number generation
 	int num1 = (int)(Math.random() * 10);
 	int num2 = (int)(Math.random() * 10);
 
@@ -40,7 +41,7 @@ import java.util.Scanner;
  	ans = scan.nextInt();
 	}
 	
-	System.out.println("You got it! Congratulation");*/	
+	System.out.println("You got it! Congratulation");	
 
 	int number = (int)(Math.random() * 101);
 	System.out.println("Guess a number between 1 and 100");
@@ -59,6 +60,56 @@ import java.util.Scanner;
 		else
 		System.out.print("Number too low, try again");
 	}
+
+	// Sentineil control loop
+	System.out.println("Enter an integer (enter 0 to stop)");	
+	int values = scan.nextInt();
+	
+	int total = 0;
+	while(values != 0){
+	total = total + values;
+
+	System.out.println("Enter an integer (enter 0 to stop)");	
+	values = scan.nextInt();
+	}	
+	System.out.println("The total sum of values enterd is:" + total);
+
+	int i = 1;
+ 	while (i < 10){
+ 	if (i % 2 != 0)
+    	System.out.println(i);
+	i++;
+	
+
+	
+
+ 	int number, max;
+	System.out.println("Enter an integer (enter 0 to stop)");
+	number = scan.nextInt();
+	max = number;
+
+	while (number != 0) {
+	System.out.println("Enter an integer (enter 0 to stop)");
+	number = scan.nextInt();
+		if (number > max){
+        	max = number;
+		}
+	}
+	System.out.println("max is " + max);
+	System.out.println("number " + number);	*/
+
+	// do while control loop
+		int values = 0;
+		int total = 0;
+	do{
+	System.out.println("Enter an integer (enter 0 to stop)");	
+	values = scan.nextInt();
+	
+	total = total + values;
+	}while(values != 0);
+		
+	System.out.println("The total sum of values enterd is:" + total);
+
 
 }
 
